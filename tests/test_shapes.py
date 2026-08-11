@@ -1,3 +1,7 @@
+"""Tests de forme des tenseurs et de la passe avant du modele."""
+
+from __future__ import annotations
+
 import pytest
 
 torch = pytest.importorskip("torch")

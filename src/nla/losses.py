@@ -36,7 +36,7 @@ def total_loss(
     contrastive: bool = False,
 ) -> tuple[torch.Tensor, dict[str, float]]:
     """L = L_rec + lambda * L_cal + beta * Omega(A)."""
-    from .models.twm import TrialWarpingModule
+    from nla.models.twm import TrialWarpingModule
 
     l_rec = reconstruction_loss(x, out["x_hat"])
     cal_fn = contrastive_calibration_loss if contrastive else calibration_loss
